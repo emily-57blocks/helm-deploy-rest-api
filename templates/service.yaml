@@ -7,9 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: 8000
+      targetPort: 8000
       protocol: TCP
-      name: http
+      name: mockkraken
   selector:
     {{- include "helm-deploy-rest-api.selectorLabels" . | nindent 4 }}
