@@ -16,9 +16,9 @@ fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
-  create: true
+  create: false
   # Automatically mount a ServiceAccount's API credentials?
-  automount: true
+  automount: false
   # Annotations to add to the service account
   annotations: {}
   # The name of the service account to use.
@@ -40,8 +40,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: NodePort
-  port: 80
+  type: ClusterIP
 
 ingress:
   enabled: true
