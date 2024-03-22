@@ -37,8 +37,8 @@ spec:
           image: "{{ .Values.image.repository }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: mockkraken
-              containerPort: 8000
+            - name: http
+              containerPort: 9001
               protocol: TCP
                 #livenessProbe:
                 #httpGet:
